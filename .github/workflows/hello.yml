@@ -21,4 +21,6 @@ jobs:
           df -h .
           # echo "$ top -n 1"
           # top -n 1
-      
+      - name: Test the code
+        run: |
+          python3 hello.py
