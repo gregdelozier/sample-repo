@@ -10,4 +10,7 @@ jobs:
       - name: Verify presence of files
         run: |
           echo Hello!
+          ls -la 
+          pwd
+          whoami
       
