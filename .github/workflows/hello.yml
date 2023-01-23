@@ -1,1 +1,13 @@
 name: Say hello
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify presence of files
+        run: |
+          echo Hello!
+      
