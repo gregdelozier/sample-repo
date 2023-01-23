@@ -7,6 +7,8 @@ jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
+      - name: Get deployment files
+        uses: actions/checkout@v2
       - name: Run some example commands
         run: |
           echo Hello!
@@ -15,8 +17,8 @@ jobs:
           whoami
           echo "-la /home/runner/work/sample-repo/sample-repo"
           ls -la /home/runner/work/sample-repo/sample-repo
-          echo "$ df ."
-          df .
+          echo "$ df -h ."
+          df -h .
           # echo "$ top -n 1"
           # top -n 1
       
