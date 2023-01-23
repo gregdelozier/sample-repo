@@ -7,7 +7,7 @@ jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Verify presence of files
+      - name: Run some example commands
         run: |
           echo Hello!
           ls -la 
