@@ -17,6 +17,6 @@ jobs:
           ls -la /home/runner/work/sample-repo/sample-repo
           echo "$ df ."
           df .
-          echo "$ top -n 1"
-          top -n 1
+          # echo "$ top -n 1"
+          # top -n 1
       
