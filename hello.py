@@ -1,5 +1,5 @@
 def create_hello_string(name):
-    return "hellox, " + name
+    return "hello, " + name
 
 def test_create_hello_string():
     assert create_hello_string("world") == "hello, world"
