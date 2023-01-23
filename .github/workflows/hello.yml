@@ -13,4 +13,10 @@ jobs:
           ls -la 
           pwd
           whoami
+          echo "-la /home/runner/work/sample-repo/sample-repo"
+          ls -la /home/runner/work/sample-repo/sample-repo
+          echo "$ df ."
+          df .
+          echo "$ top -n 1"
+          top -n 1
       
