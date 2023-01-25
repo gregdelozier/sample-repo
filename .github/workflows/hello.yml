@@ -29,4 +29,5 @@ jobs:
       - name: Check on node
         run: |
           node --version
-          
+          node hello.js
+
