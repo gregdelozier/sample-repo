@@ -1,7 +1,7 @@
 // example program for testing
 
 function create_hello_string(name) {
-    return "hello2, " + name + "!"
+    return "hello, " + name + "!"
 }
 
 function create_goodbye_string(name) {
