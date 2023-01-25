@@ -26,3 +26,7 @@ jobs:
       - name: Test the code
         run: |
           python3 hello.py
+      - name: Check on node
+        run: |
+          node --version
+          
