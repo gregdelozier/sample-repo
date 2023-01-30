@@ -4,7 +4,7 @@ from bottle import default_app, run, route
 
 @route('/')
 def hello_world():
-    return 'Hello from Bottle (sample-repo)!'
+    return 'Hello from the sample repo app!'
 
 if "PYTHONANYWHERE_DOMAIN" in os.environ:
     application = default_app()
