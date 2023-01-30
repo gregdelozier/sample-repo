@@ -1,10 +1,14 @@
 # A very simple Bottle Hello World app for you to get started with...
 import os
-from bottle import default_app, run, route
+from bottle import default_app, run, route, static_file, redirect
 
 @route('/')
-def hello_world():
-    return 'Hello from the sample repo app!'
+def get_index():
+    redirect("/index.html")    
+
+@route('<filepath:path>')
+def get_static(filepath):
+    return static_file(filepath, root="./")
 
 if "PYTHONANYWHERE_DOMAIN" in os.environ:
     application = default_app()
