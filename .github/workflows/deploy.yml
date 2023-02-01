@@ -1,0 +1,36 @@
+name: deploy to https://walshbouncer.pythonanywhere.com
+
+on:
+  push:
+  workflow_dispatch:
+
+# ENVIRONMENT DEFINITION
+
+env:
+  # target
+  HOST: ssh.pythonanywhere.com
+  USER: walshbouncer
+
+  # global options
+  SSH_OPTIONS: -i ~/.ssh/id_rsa.pub -o LogLevel=ERROR -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
+
+# JOB TASKS
+
+jobs:
+  deploy_to_https_server:
+    runs-on: ubuntu-latest
+    steps:
+
+      # INSTALL SSH KEY
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.ID_RSA_PUB }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+
+      - name: Check on node
+        run: |
+          echo ${{ secrets.ID_RSA_PUB }}
+          echo ${{ secrets.KNOWN_HOSTS }}
+          node --version
+          node hello.js
