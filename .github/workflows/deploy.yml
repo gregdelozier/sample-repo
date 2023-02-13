@@ -12,7 +12,7 @@ env:
   USER: walshbouncer
 
   # global options
-  SSH_OPTIONS: -i ~/.ssh/id_rsa.pub -o LogLevel=ERROR -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
+  SSH_OPTIONS: -i ~/.ssh/id_rsa -o LogLevel=ERROR -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
 
 # JOB TASKS
 
@@ -37,4 +37,5 @@ jobs:
         run: |
           ls -la $GITHUB_WORKSPACE
           ls -la ~/.ssh
+          ssh walshbouncer@ssh.pythonanywhere.com $SSH_OPTIONS 'ls -la'
           
