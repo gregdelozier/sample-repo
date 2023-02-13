@@ -25,12 +25,12 @@ jobs:
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
         with:
-          key: ${{ secrets.ID_RSA_PUB }}
+          key: ${{ secrets.ID_RSA_WALSH }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
       - name: Check on node
         run: |
-          echo ${{ secrets.ID_RSA_PUB }}
+          echo ${{ secrets.ID_RSA_WALSH }}
           echo ${{ secrets.KNOWN_HOSTS }}
           node --version
           node hello.js
