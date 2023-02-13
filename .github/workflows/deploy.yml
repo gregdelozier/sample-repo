@@ -33,7 +33,8 @@ jobs:
         with: 
           repository: gregdelozier/sample-repo
 
-      - name: Check on node
+      - name: Copy files to server
         run: |
-          ls ~
           ls -la $GITHUB_WORKSPACE
+          ls -la ~/.ssh
+          
