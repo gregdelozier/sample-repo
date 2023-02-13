@@ -30,7 +30,7 @@ jobs:
 
       - name: Check on node
         run: |
-          echo ${{ secrets.ID_RSA_WALSH }}
-          echo ${{ secrets.KNOWN_HOSTS }}
+          # echo ${{ secrets.ID_RSA_WALSH }}
+          # echo ${{ secrets.KNOWN_HOSTS }}
           node --version
-          node hello.js
+          # node hello.js
