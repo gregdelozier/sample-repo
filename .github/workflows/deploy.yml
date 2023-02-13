@@ -30,6 +30,7 @@ jobs:
 
       - name: Check on node
         run: |
+          node --version
           pwd
           ls /
           ls -la /
