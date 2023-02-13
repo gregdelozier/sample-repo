@@ -35,7 +35,11 @@ jobs:
 
       - name: Copy files to server
         run: |
-          ls -la $GITHUB_WORKSPACE
-          ls -la ~/.ssh
-          ssh walshbouncer@ssh.pythonanywhere.com $SSH_OPTIONS 'ls -la'
+          export TARGET=$USER@$HOST
+          export RUN="ssh $SSH_OPTIONS $TARGET"
+
+          # ls -la $GITHUB_WORKSPACE
+          $RUN 'ls -la'
+          $RUN 'pwd'
+          $RUN 'whoami'
           
