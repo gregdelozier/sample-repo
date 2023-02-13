@@ -28,6 +28,11 @@ jobs:
           key: ${{ secrets.ID_RSA_WALSH }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
+      - name: Get sample repo
+        uses: actions/checkout@v2
+        with: 
+          repository: gregdelozier/sample-repo
+
       - name: Check on node
         run: |
           ls ~
