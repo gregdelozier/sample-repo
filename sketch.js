@@ -14,11 +14,11 @@ function setup() {
 
 //function to create a ball when called
 function ball(){
-  circle(ball_x, ball_y, 60)
+  circle(ball_x, ball_y, 10)
 }
 
 function draw() {
-    background(50);
+    background(200);
     
     //logs the x and y postion of the user's mouseclick
     console.log(ball_x, ball_y)
