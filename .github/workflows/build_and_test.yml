@@ -15,6 +15,10 @@ jobs:
         with: 
           repository: gregdelozier/sample-repo
 
+      - name: Test python version
+        run: |
+          python --version
+
       - name: Test math functions
         run: |
           pip install pytest

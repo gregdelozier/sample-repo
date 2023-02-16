@@ -14,7 +14,7 @@ function setup() {
 
 //function to create a ball when called
 function ball(){
-  circle(ball_x, ball_y, 10)
+  circle(ball_x, ball_y, 40)
 }
 
 function draw() {
@@ -35,7 +35,7 @@ function draw() {
       ball()
 
       //calculate the speed of the ball
-      dy = dy + ((time) * 10)
+      dy = dy + ((time/10) * 10)
 
       //make the ball drop according gravity
       ball_y = ball_y + (dy * (time))
