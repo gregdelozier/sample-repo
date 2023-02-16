@@ -1,4 +1,4 @@
-from mathstuff import add, sub, div, mul
+from mathstuff import add, sub, div, mul, info
 
 def test_add():
     print("test_add")
@@ -15,6 +15,10 @@ def test_mul():
 def test_div():
     print("test_div")
     assert div(4,2) == 2
+
+def test_info():
+    print("test_info")
+    assert type(info()) is str
 
 if __name__ == "__main__":
    test_add()

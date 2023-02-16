@@ -15,8 +15,7 @@ jobs:
         with: 
           repository: gregdelozier/sample-repo
 
-      - name: Copy files to server
+      - name: Test math functions
         run: |
-           ls -la
-           pip install pytest
-           pytest test_mathstuff.py
+          pip install pytest
+          pytest test_mathstuff.py
