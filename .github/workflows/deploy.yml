@@ -2,7 +2,7 @@ name: deploy to https://walshbouncer.pythonanywhere.com
 
 on:
   push:
-  workflow_dispatch:
+  # workflow_dispatch:
 
 # ENVIRONMENT DEFINITION
 
