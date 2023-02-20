@@ -26,6 +26,7 @@ jobs:
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.ID_RSA_WALSH }}
+          name: id_rsa
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
       - name: Get sample repo
@@ -33,20 +34,16 @@ jobs:
         with: 
           repository: gregdelozier/sample-repo
 
-      - name: Copy files to server
-        run: |
-          echo ${{ secrets.ID_RSA_WALSH }}
-
-      # - name: Copy files to server
-      #   run: |
-      #     export TARGET=$USER@$HOST
-      #     export RUN="ssh $SSH_OPTIONS $TARGET"
-      #     export COPY="scp $SSH_OPTIONS"
+     - name: Copy files to server
+       run: |
+          export TARGET=$USER@$HOST
+          export RUN="ssh $SSH_OPTIONS $TARGET"
+          export COPY="scp $SSH_OPTIONS"
 
       #     # ls -la $GITHUB_WORKSPACE
-      #     $RUN 'ls -la'
-      #     $RUN 'pwd'
-      #     $RUN 'whoami'
+          $RUN 'ls -la'
+          $RUN 'pwd'
+          $RUN 'whoami'
       #     # $RUN 'cd mysite ; git pull'
       #     echo $COPY $GITHUB_WORKSPACE/index.html $TARGET:/home/walshbouncer/mysite
       #     $COPY $GITHUB_WORKSPACE/index.html $TARGET:/home/walshbouncer/mysite
