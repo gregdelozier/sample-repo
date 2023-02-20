@@ -49,4 +49,6 @@ jobs:
           $COPY $GITHUB_WORKSPACE/sketch.js $TARGET:/home/walshbouncer/mysite
           echo $COPY $GITHUB_WORKSPACE/style.css $TARGET:/home/walshbouncer/mysite
           $COPY $GITHUB_WORKSPACE/style.css $TARGET:/home/walshbouncer/mysite
+          echo $RUN 'touch /var/www/walshbouncer_pythonanywhere_com_wsgi.py'
+          $RUN 'touch /var/www/walshbouncer_pythonanywhere_com_wsgi.py'
           

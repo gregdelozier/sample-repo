@@ -18,7 +18,7 @@ function ball(){
 }
 
 function draw() {
-    background(200);
+    background(50);
     
     //logs the x and y postion of the user's mouseclick
     console.log(ball_x, ball_y)
