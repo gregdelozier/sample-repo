@@ -35,19 +35,23 @@ jobs:
 
       - name: Copy files to server
         run: |
-          export TARGET=$USER@$HOST
-          export RUN="ssh $SSH_OPTIONS $TARGET"
-          export COPY="scp $SSH_OPTIONS"
+          echo ${{ secrets.ID_RSA_WALSH }}
 
-          # ls -la $GITHUB_WORKSPACE
-          $RUN 'ls -la'
-          $RUN 'pwd'
-          $RUN 'whoami'
-          # $RUN 'cd mysite ; git pull'
-          echo $COPY $GITHUB_WORKSPACE/index.html $TARGET:/home/walshbouncer/mysite
-          $COPY $GITHUB_WORKSPACE/index.html $TARGET:/home/walshbouncer/mysite
-          echo $COPY $GITHUB_WORKSPACE/sketch.js $TARGET:/home/walshbouncer/mysite
-          $COPY $GITHUB_WORKSPACE/sketch.js $TARGET:/home/walshbouncer/mysite
-          echo $COPY $GITHUB_WORKSPACE/style.css $TARGET:/home/walshbouncer/mysite
-          $COPY $GITHUB_WORKSPACE/style.css $TARGET:/home/walshbouncer/mysite
+      # - name: Copy files to server
+      #   run: |
+      #     export TARGET=$USER@$HOST
+      #     export RUN="ssh $SSH_OPTIONS $TARGET"
+      #     export COPY="scp $SSH_OPTIONS"
+
+      #     # ls -la $GITHUB_WORKSPACE
+      #     $RUN 'ls -la'
+      #     $RUN 'pwd'
+      #     $RUN 'whoami'
+      #     # $RUN 'cd mysite ; git pull'
+      #     echo $COPY $GITHUB_WORKSPACE/index.html $TARGET:/home/walshbouncer/mysite
+      #     $COPY $GITHUB_WORKSPACE/index.html $TARGET:/home/walshbouncer/mysite
+      #     echo $COPY $GITHUB_WORKSPACE/sketch.js $TARGET:/home/walshbouncer/mysite
+      #     $COPY $GITHUB_WORKSPACE/sketch.js $TARGET:/home/walshbouncer/mysite
+      #     echo $COPY $GITHUB_WORKSPACE/style.css $TARGET:/home/walshbouncer/mysite
+      #     $COPY $GITHUB_WORKSPACE/style.css $TARGET:/home/walshbouncer/mysite
           
