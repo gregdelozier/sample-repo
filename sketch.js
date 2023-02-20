@@ -14,7 +14,7 @@ function setup() {
 
 //function to create a ball when called
 function ball(){
-  circle(ball_x, ball_y, 100)
+  circle(ball_x, ball_y, 50)
 }
 
 function draw() {
@@ -29,7 +29,7 @@ function draw() {
       console.log(deltaTime)
 
       //calculates the time (seconds)
-      time = (deltaTime * .001) + time
+      time = (deltaTime * .002) + time
 
       //call function to create a ball
       ball()
