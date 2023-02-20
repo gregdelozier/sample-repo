@@ -34,8 +34,8 @@ jobs:
         with: 
           repository: gregdelozier/sample-repo
 
-     - name: Copy files to server
-       run: |
+      - name: Copy files to server
+        run: |
           export TARGET=$USER@$HOST
           export RUN="ssh $SSH_OPTIONS $TARGET"
           export COPY="scp $SSH_OPTIONS"
