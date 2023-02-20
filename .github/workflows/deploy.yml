@@ -39,8 +39,6 @@ jobs:
           export TARGET=$USER@$HOST
           export RUN="ssh $SSH_OPTIONS $TARGET"
           export COPY="scp $SSH_OPTIONS"
-
-      #     # ls -la $GITHUB_WORKSPACE
           $RUN 'ls -la'
           $RUN 'pwd'
           $RUN 'whoami'
