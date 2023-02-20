@@ -14,7 +14,7 @@ function setup() {
 
 //function to create a ball when called
 function ball(){
-  circle(ball_x, ball_y, 40)
+  circle(ball_x, ball_y, 100)
 }
 
 function draw() {
