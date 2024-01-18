@@ -1,0 +1,26 @@
+name: test_example
+
+on:
+  push:
+  # pull_request:
+  #   branches: [ "**" ]
+  workflow_dispatch:
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get sample repo
+        uses: actions/checkout@v2
+        with: 
+          repository: gregdelozier/sample-repo
+
+      - name: Test node version
+        run: |
+          node --version
+          ls -la
+
+      - name: Test math functions
+        run: |
+          cat package.json
+          
