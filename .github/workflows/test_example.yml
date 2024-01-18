@@ -23,4 +23,6 @@ jobs:
       - name: Test math functions
         run: |
           cat package.json
+          npm install chai
+          node example.js
           
